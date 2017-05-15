@@ -1,0 +1,7 @@
+<%= form_tag @post, method: :put do %>
+  <label for="title">Post title:</label>
+  <%= text_field_tag :title, @post.title %><br>
+  <label for="description">Description:</label>
+  <%= text_field_tag :description, @post.description %><br>
+  <%= submit_tag 'Submit Post'%>
+<% end %>
