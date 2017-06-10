@@ -421,3 +421,68 @@ Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-31 14:38:13 -0600
+
+
+Started GET "/" for 71.62.201.13 at 2017-06-10 23:40:37 +0000
+Cannot render console from 71.62.201.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (1.7ms)
+Completed 200 OK in 69ms (Views: 58.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 71.62.201.13 at 2017-06-10 23:40:44 +0000
+Cannot render console from 71.62.201.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 2941ms (Views: 2933.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/posts" for 71.62.201.13 at 2017-06-10 23:40:52 +0000
+Cannot render console from 71.62.201.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FY8Rmdd63J7Qlh3DXEtdjzoiKtxy98s1TuvgVGomn4nzX7eIa+6U8d7eaMwBXYCRcwlUq5LkcN2WRO4kQIfE1w==", "title"=>"22", "description"=>"33", "commit"=>"Submit Post"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "22"], ["description", "33"], ["created_at", "2017-06-10 23:40:52.875379"], ["updated_at", "2017-06-10 23:40:52.875379"]]
+  [1m[35m (5.3ms)[0m  commit transaction
+Redirected to http://159.203.110.173:30000/posts/3
+Completed 302 Found in 33ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/posts/3" for 71.62.201.13 at 2017-06-10 23:40:52 +0000
+Cannot render console from 71.62.201.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 17.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/3/edit" for 71.62.201.13 at 2017-06-10 23:40:57 +0000
+Cannot render console from 71.62.201.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered posts/edit.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 23ms (Views: 21.3ms | ActiveRecord: 0.1ms)
+
+
+Started PUT "/posts/3" for 71.62.201.13 at 2017-06-10 23:41:01 +0000
+Cannot render console from 71.62.201.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5dNAgdQI1O2WsErwLxWktTf6Y5fr5AOr7/gKqU63JzADA+aQaJycgpj4P/9yA3mrftEd4Av3uEM3VwTZZBZ8bg==", "title"=>"44", "description"=>"33", "commit"=>"Submit Post", "id"=>"3"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "posts" SET "title" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["title", "44"], ["updated_at", "2017-06-10 23:41:01.631972"], ["id", 3]]
+  [1m[35m (35.9ms)[0m  commit transaction
+Redirected to http://159.203.110.173:30000/posts/3
+Completed 302 Found in 45ms (ActiveRecord: 36.7ms)
+
+
+Started GET "/posts/3" for 71.62.201.13 at 2017-06-10 23:41:01 +0000
+Cannot render console from 71.62.201.13! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered posts/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.1ms)
