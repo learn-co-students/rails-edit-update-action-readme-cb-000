@@ -421,3 +421,125 @@ Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-12-31 14:38:13 -0600
+
+
+Started GET "/" for 67.253.15.95 at 2017-12-29 23:56:58 +0000
+Cannot render console from 67.253.15.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (2.2ms)
+Completed 200 OK in 26ms (Views: 14.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/new" for 67.253.15.95 at 2017-12-29 23:57:06 +0000
+Cannot render console from 67.253.15.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 2951ms (Views: 2901.1ms | ActiveRecord: 32.7ms)
+
+
+Started GET "/posts" for 67.253.15.95 at 2017-12-29 23:57:17 +0000
+Cannot render console from 67.253.15.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 59ms (Views: 58.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/2/edit" for 67.253.15.95 at 2017-12-29 23:57:28 +0000
+Cannot render console from 67.253.15.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 40ms (Views: 25.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/posts" for 67.253.15.95 at 2017-12-29 23:57:31 +0000
+Cannot render console from 67.253.15.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BhpniAcfTl7ZPBrkryt1COk6B8XTb1+EROxRE+X5nskglWKXwWvOZtyFtOi/iyWq9n2X056404CkjdnvQE7RHg==", "title"=>"Rails Introduction bbb", "description"=>"asdfasdf", "commit"=>"Submit Post"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Rails Introduction bbb"], ["description", "asdfasdf"], ["created_at", "2017-12-29 23:57:31.805574"], ["updated_at", "2017-12-29 23:57:31.805574"]]
+  [1m[35m (184.2ms)[0m  commit transaction
+Redirected to http://138.197.199.78:30001/posts/3
+Completed 302 Found in 192ms (ActiveRecord: 185.1ms)
+
+
+Started GET "/posts/3" for 67.253.15.95 at 2017-12-29 23:57:32 +0000
+Cannot render console from 67.253.15.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 67.253.15.95 at 2017-12-30 00:01:15 +0000
+Cannot render console from 67.253.15.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 71ms (Views: 59.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/2/edit" for 67.253.15.95 at 2017-12-30 00:01:27 +0000
+Cannot render console from 67.253.15.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/edit.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 530ms (Views: 512.4ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/posts/2" for 67.253.15.95 at 2017-12-30 00:01:43 +0000
+Cannot render console from 67.253.15.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XSTE0z/dI80y5Y2icGu0rrwpsXdsEr1jNCsi4AW5ex17q8HM+amj9TdcI65gy+QMo24hYSHFMWfUSqocoA40yg==", "title"=>"Rails Introduction aaa", "description"=>"this is a post", "commit"=>"Submit Post", "id"=>"2"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+RuntimeError ({"utf8"=>"✓", "_method"=>"put", "authenticity_token"=>"XSTE0z/dI80y5Y2icGu0rrwpsXdsEr1jNCsi4AW5ex17q8HM+amj9TdcI65gy+QMo24hYSHFMWfUSqocoA40yg==", "title"=>"Rails Introduction aaa", "description"=>"this is a post", "commit"=>"Submit Post", "controller"=>"posts", "action"=>"update", "id"=>"2"}):
+  app/controllers/posts_controller.rb:27:in `update'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (56.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (149.9ms)
+
+
+Started GET "/" for 67.253.15.95 at 2017-12-30 00:04:59 +0000
+Cannot render console from 67.253.15.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts/2/edit" for 67.253.15.95 at 2017-12-30 00:05:06 +0000
+Cannot render console from 67.253.15.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/edit.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 42ms (Views: 17.6ms | ActiveRecord: 0.8ms)
+
+
+Started PUT "/posts/2" for 67.253.15.95 at 2017-12-30 00:05:18 +0000
+Cannot render console from 67.253.15.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1uyN5zMlKq9ehSoXeHjMNPj4PQ7qEkJYPKY6FoFc+kzwY4j49VGql1s8hBto2JyW57+tGKfFzlzcx7LqJOu1mw==", "title"=>"Rails Introduction ccc", "description"=>"my post", "commit"=>"Submit Post", "id"=>"2"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "posts" SET "title" = ?, "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["title", "Rails Introduction ccc"], ["description", "my post"], ["updated_at", "2017-12-30 00:05:18.199399"], ["id", 2]]
+  [1m[36m (2.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://138.197.199.78:30001/posts/2
+Completed 302 Found in 17ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/posts/2" for 67.253.15.95 at 2017-12-30 00:05:18 +0000
+Cannot render console from 67.253.15.95! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.1ms)
