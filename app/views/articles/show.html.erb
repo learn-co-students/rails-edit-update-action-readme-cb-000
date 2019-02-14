@@ -1,2 +1,10 @@
 <h1><%= @article.title %></h1>
 <p><%= @article.description %></p>
+
+<%= form_tag edit_article_path(@article), :method => :get do %>
+  <%= submit_tag "Edit Article" %>
+<% end %>
+
+<%= form_tag articles_path, :method => :get do %>
+  <%= submit_tag "Go To Home" %>
+<% end %>
