@@ -1,3 +1,10 @@
 <% @articles.each do |article| %>
-  <div><%= article.title %></div>
+  <div><%= link_to article.title, article_path(article) %></div>
+<% end %>
+<br>
+<br>
+<br>
+
+<%= form_tag new_article_path, :method => :get do %>
+  <%= submit_tag "Create New Article" %>
 <% end %>
