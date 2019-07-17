@@ -20,4 +20,17 @@ class ArticlesController < ApplicationController
   end
 
   # add edit and update methods here
+
+  #This code is telling the edit action to store the article record in 
+  #an instance variable called @article
+  def edit  
+    @article = Article.find(params[:id])
+  end
+   
+  def update
+    @article = Article.find(params[:id])
+  @article.update(title: params[:article][:title], description: params[:article][:description])
+  redirect_to article_path(@article)
+  end
+
 end

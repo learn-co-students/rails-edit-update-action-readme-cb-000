@@ -1,0 +1,15 @@
+<-- #Here, we are setting the form up to auto-fill the form fields with the proper
+#data from the @article instance variable. We also use the form helper called 
+#form_for that automatically sets up the url where the form will be sent. The form_for
+#helper knows that @article is not a new instance of the Article class, so it will 
+#send the info to the update path. -->
+
+<%= form_for @article do |f| %>
+    <%= f.label 'Article Title' %><br>
+    <%= f.text_field :title %><br>
+   
+    <%= f.label 'Article Description' %><br>
+    <%= f.text_area :description %><br>
+   
+    <%= f.submit "Submit Article" %>
+  <% end %>
